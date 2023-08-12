@@ -2,7 +2,7 @@ import os
 import csv
 import pyodbc
 
-# Set connection to database
+# Set connection parameters
 server = 'DESKTOP-K7G5BRS'
 database = 'globant'
 username = 'globant'
