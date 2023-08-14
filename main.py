@@ -31,10 +31,10 @@ for file, table in files_tables.items():
         csv_reader = csv.reader(csv_file)
         # in case it need to skip 1st line
         # next(lector_csv, None)
-        for line in csv_reader:
-            value = ','.join(['?' for _ in line])
+        for row in csv_reader:
+            value = ','.join(['?' for _ in row])
             query = f'INSERT INTO {table} VALUES ({value})'
-            cursor.execute(query, line)
+            cursor.execute(query, row)
     connection.commit()
 
 # close connection
